@@ -1,0 +1,20 @@
+.green {
+    .logo {
+        background-image: url('./assets/logo1.svg');
+    }
+    form {
+        button {
+            background-color: $green;
+            color: $white;
+            &:hover {
+                background-color: $green-dark;
+            }
+        }
+    }
+    .left-side img {
+        border: solid 3px $green;
+    }
+    .star-system li {
+        color: $green;
+    }
+}

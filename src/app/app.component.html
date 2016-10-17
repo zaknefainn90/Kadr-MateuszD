@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div [ngClass]="setClasses()">
+    <header>
+        <div class="logo"></div>
+    </header>
+
+    <section>
+        <form name="searchForm" method="post" (ngSubmit)="searchInDB(search.value)">
+            <input type="text" name="search" placeholder="Szukaj" required="" #search>
+            <button type="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </section>
+
+    <app-output [production]="production" (onProp)="changed($event)"></app-output>
+</div>

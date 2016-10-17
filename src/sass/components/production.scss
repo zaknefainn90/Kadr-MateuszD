@@ -1,0 +1,121 @@
+.production, .production-box, .production-error {
+    width: 100%;
+}
+
+.production-box, .production-error {
+    margin-top: 50px;
+    padding: 30px 2%;
+    background-color: $white;
+    border: 1px solid #dddddd;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.production {
+    display: flex;
+}
+
+.production-error {
+    text-align: center;
+    font-size: $font-biger;
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.production-box {
+    h2 {
+        margin: 0 0 15px 0;
+        font-weight: bold;
+        line-height: 1.5em;
+        span {
+            font-weight: normal;
+        }
+    }
+}
+
+.left-side {
+    float: left;
+    width: 40%;
+    padding-right: 35px;
+    box-sizing: border-box;
+    img {
+        float: right;
+    }
+}
+
+.right-side {
+    float: right;
+    width: 60%;
+    box-sizing: border-box;
+    > ul {
+        margin-top: 20px;
+        padding-left: 0;
+        list-style: none;
+        li {
+            font-size: $font-normal;
+            margin-bottom: 12px;
+            &:last-of-type{
+                margin-top: 30px;
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+.time {
+    font-size: $font-big;
+}
+
+.star-system {
+    display: flex;
+    margin-top: 30px;
+    ul {
+        display: inline-block;
+        padding-left: 0;
+        list-style: none;
+    }
+    li {
+        float: left;
+        margin-right: 8px;
+        font-size: $font-big;
+    }
+    > span {
+        margin: 14px 0 0 8px;
+        font-size: $font-normal;
+    }
+}
+
+@media (max-width: 960px) {
+    .left-side {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-right: 0px;
+        img {
+            width: 60%;
+            height: 100%;
+        }
+    }
+    .right-side {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .production-box {
+        padding: 10px 2%;
+    }
+    .left-side img {
+        width: 100%;
+    }
+    .right-side {
+        margin-top: 20px;
+    }
+    .star-system li {
+        margin-bottom: 8px;
+    }
+}

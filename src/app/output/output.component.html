@@ -1,0 +1,71 @@
+<section class="production">
+  <div class="production-error" [hidden]="responseValid">
+      <p>
+          Nie znaleziono w bazie :(
+      </p>
+  </div>
+  <div class="production-box" [hidden]="hidden">
+
+    <div class="left-side">
+      <img [src]="imgPath" [alt]="title">
+    </div>
+
+    <div class="right-side">
+
+
+      <h2>{{title}} <span>({{year}})</span></h2>
+      <span class="time">{{time}}.</span>
+      <div class="star-system">
+        <ul>
+          <li>
+            <span *ngIf="stars >= 1.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 1.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 2.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 2.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 3.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 3.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 4.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 4.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 5.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 5.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 6.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 6.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 7.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 7.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <span *ngIf="stars >= 8.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 8.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li><span *ngIf="stars >= 9.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 9.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+          <li><span *ngIf="stars >= 10.0"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span *ngIf="stars < 10.0"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+          </li>
+        </ul>
+        <span>{{votes}} głosów</span>
+      </div>
+      <ul>
+        <li>Reżyseria: {{director}}</li>
+        <li>Gatunek: {{genre}}</li>
+        <li>Data premiery: {{started}}</li>
+        <li *ngIf="sezons > 0">Ilość sezonów: {{sezons}}</li>
+        <li>{{description}}</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
